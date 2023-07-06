@@ -1,0 +1,485 @@
+create collections in zen_class database
+
+1.Insert documents in collections
+i) users
+
+zen_class> db.users.insertMany([
+...   {
+...     user_id: 1,
+...     name: "selva",
+...     email: "selva@gmail.com",
+...     mentor_id: 1,
+...   },
+...   {
+...     user_id: 2,
+...     name: "kumar",
+...     email: "kumar@gmail.com",
+...     mentor_id: 2,
+...   },
+...   {
+...     user_id: 3,
+...     name: "viji",
+...     email: "viji@gmail.com",
+...     mentor_id: 6,
+...   },
+...   {
+...     user_id: 4,
+...     name: "siva",
+...     email: "siva@gmail.com",
+...     mentor_id: 7,
+...   },
+...   {
+...     user_id: 5,
+...     name: "karthik",
+...     email: "karthik@gmail.com",
+...     mentor_id: 4,
+...   },
+...   {
+...     user_id: 6,
+...     name: "vikram",
+...     email: "vikram@gmail.com",
+...     mentor_id: 1,
+...   },
+...   {
+...     user_id: 7,
+...     name: "kalai",
+...     email: "kalai@gmail.com",
+...     mentor_id: 2,
+...   },
+...   {
+...     user_id: 8,
+...     name: "meena",
+...     email: "meena@gmail.com",
+...     mentor_id: 4,
+...   },
+...   {
+...     user_id: 9,
+...     name: "vijay",
+...     email: "vijay@gmail.com",
+...     mentor_id: 3,
+...   },
+...   {
+...     user_id: 10,
+...     name: "ajith",
+...     email: "ajith@gmail.com",
+...     mentor_id: 6,
+...   },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("649fd441e0c2043c1110a4aa"),
+    '1': ObjectId("649fd441e0c2043c1110a4ab"),
+    '2': ObjectId("649fd441e0c2043c1110a4ac"),
+    '3': ObjectId("649fd441e0c2043c1110a4ad"),
+    '4': ObjectId("649fd441e0c2043c1110a4ae"),
+    '5': ObjectId("649fd441e0c2043c1110a4af"),
+    '6': ObjectId("649fd441e0c2043c1110a4b0"),
+    '7': ObjectId("649fd441e0c2043c1110a4b1"),
+    '8': ObjectId("649fd441e0c2043c1110a4b2"),
+    '9': ObjectId("649fd441e0c2043c1110a4b3")
+  }
+}
+
+ii)codekata
+zen_class> db.codekata.insertMany([
+...   {
+...     user_id: 1,
+...     problems: 180,
+...   },
+...   {
+...     user_id: 2,
+...     problems: 125,
+...   },
+...   {
+...     user_id: 3,
+...     problems: 87,
+...   },
+...   {
+...     user_id: 4,
+...     problems: 70,
+...   },
+...   {
+...     user_id: 5,
+...     problems: 87,
+...   },
+...   {
+...     user_id: 6,
+...     problems: 250,
+...   },
+...   {
+...     user_id: 7,
+...     problems: 140,
+...   },
+...   {
+...     user_id: 8,
+...     problems: 420,
+...   },
+...   {
+...     user_id: 9,
+...     problems: 350,
+...   },
+...   {
+...     user_id: 10,
+...     problems: 170,
+...   },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("649fd7b7e0c2043c1110a4b4"),
+    '1': ObjectId("649fd7b7e0c2043c1110a4b5"),
+    '2': ObjectId("649fd7b7e0c2043c1110a4b6"),
+    '3': ObjectId("649fd7b7e0c2043c1110a4b7"),
+    '4': ObjectId("649fd7b7e0c2043c1110a4b8"),
+    '5': ObjectId("649fd7b7e0c2043c1110a4b9"),
+    '6': ObjectId("649fd7b7e0c2043c1110a4ba"),
+    '7': ObjectId("649fd7b7e0c2043c1110a4bb"),
+    '8': ObjectId("649fd7b7e0c2043c1110a4bc"),
+    '9': ObjectId("649fd7b7e0c2043c1110a4bd")
+  }
+}
+
+iii)topics
+zen_class> db.topics.insertMany([
+ {
+...     topic_id: 1,
+...     topic: "Html",
+...     topic_date: new Date("15-oct-2020"),
+...   },
+...   {
+...     topic_id: 2,
+...     topic: "Css",
+...     topic_date: new Date("19-oct-2020"),
+...   },
+...   {
+...     topic_id: 3,
+...     topic: "Javascript",
+...     topic_date: new Date("24-oct-2020"),
+...   },
+...   {
+...     topic_id: 4,
+...     topic: "React",
+...     topic_date: new Date("26-oct-2020"),
+...   },
+...   {
+...     topic_id: 5,
+...     topic: "NodeJs",
+...     topic_date: new Date("29-oct-2020"),
+...   },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("649fea25e0c2043c1110a4be"),
+    '1': ObjectId("649fea25e0c2043c1110a4bf"),
+    '2': ObjectId("649fea25e0c2043c1110a4c0"),
+    '3': ObjectId("649fea25e0c2043c1110a4c1"),
+    '4': ObjectId("649fea25e0c2043c1110a4c2")
+  }
+}
+
+iv)Attendance
+zen_class> db.attendance.insertMany([
+...   {
+...     user_id: 1,
+...     topic_id: 1,
+...     attended: true,
+...   },
+...   {
+...     user_id: 2,
+...     topic_id: 2,
+...     attended: true,
+...   },
+...   {
+...     user_id: 3,
+...     topic_id: 3,
+...     attended: true,
+...   },
+...   {
+...     user_id: 4,
+...     topic_id: 4,
+...     attended: false,
+...   },
+...   {
+...     user_id: 5,
+...     topic_id: 5,
+...     attended: true,
+...   },{
+...     user_id: 6,
+...     topic_id: 1,
+...     attended: false,
+...   },
+...   {
+...     user_id: 7,
+...     topic_id: 2,
+...     attended: true,
+...   },
+...   {
+...     user_id: 8,
+...     topic_id: 3,
+...     attended: false,
+...   },
+...   {
+...     user_id: 9,
+...     topic_id: 4,
+...     attended: true,
+...   },
+...   {
+...     user_id: 10,
+...     topic_id: 5,
+...     attended: true,
+...   },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("649ff015e0c2043c1110a4cd"),
+    '1': ObjectId("649ff015e0c2043c1110a4ce"),
+    '2': ObjectId("649ff015e0c2043c1110a4cf"),
+    '3': ObjectId("649ff015e0c2043c1110a4d0"),
+    '4': ObjectId("649ff015e0c2043c1110a4d1"),
+    '5': ObjectId("649ff015e0c2043c1110a4d2"),
+    '6': ObjectId("649ff015e0c2043c1110a4d3"),
+    '7': ObjectId("649ff015e0c2043c1110a4d4"),
+    '8': ObjectId("649ff015e0c2043c1110a4d5"),
+    '9': ObjectId("649ff015e0c2043c1110a4d6")
+  }
+}
+
+v)Tasks
+zen_class> db.tasks.insertMany([
+... {
+...     task_id: 1,
+...     topic_id: 1,
+...     user_id: 1,
+...     task: "Html task",
+...     due_date: new Date("1-oct-2020"),
+...     submitted: true,
+...   },
+...   {
+...     task_id: 2,
+...     topic_id: 2,
+...     user_id: 2,
+...     task: "Css task",
+...     due_date: new Date("4-oct-2020"),
+...     submitted: true,
+...   },
+...   {
+...     task_id: 3,
+...     topic_id: 3,
+...     user_id: 3,
+...     task: "Javascript task",
+...     due_date: new Date("16-oct-2020"),
+...     submitted: false,
+...   },
+...   {
+...     task_id: 4,
+...     topic_id: 4,
+...     user_id: 4,
+...     task: "React task",
+...     due_date: new Date("21-oct-2020"),
+...     submitted: true,
+...   },
+...   {
+...     task_id: 5,
+...     topic_id: 5,
+...     user_id: 5,
+...     task: "Node task",
+...     due_date: new Date("28-oct-2020"),
+...     submitted: true,
+...   },
+...   {
+...     task_id: 1,
+...     topic_id: 1,
+...     user_id: 6,
+...     task: "Html task",
+...     due_date: new Date("2-oct-2020"),
+...     submitted: false,
+...   },
+...   {
+...     task_id: 2,
+...     topic_id: 2,
+...     user_id: 7,
+...     task: "Css task",
+...     due_date: new Date("7-oct-2020"),
+...     submitted: true,
+...   },
+...   {
+...     task_id: 3,
+...     topic_id: 3,
+...     user_id: 8,
+...     task: "Javascript task",
+...     due_date: new Date("14-oct-2020"),
+...     submitted: true,
+...   },
+...   {
+...     task_id: 4,
+...     topic_id: 4,
+...     user_id: 9,
+...     task: "React task",
+...     due_date: new Date("22-oct-2020"),
+...     submitted: false,
+...   },
+...   {
+...     task_id: 5,
+...     topic_id: 5,
+...     user_id: 10,
+...     task: "Node task",
+...     due_date: new Date("29-oct-2020"),
+...     submitted: true,
+...   },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("649ff2d5e0c2043c1110a4d7"),
+    '1': ObjectId("649ff2d5e0c2043c1110a4d8"),
+    '2': ObjectId("649ff2d5e0c2043c1110a4d9"),
+    '3': ObjectId("649ff2d5e0c2043c1110a4da"),
+    '4': ObjectId("649ff2d5e0c2043c1110a4db"),
+    '5': ObjectId("649ff2d5e0c2043c1110a4dc"),
+    '6': ObjectId("649ff2d5e0c2043c1110a4dd"),
+    '7': ObjectId("649ff2d5e0c2043c1110a4de"),
+    '8': ObjectId("649ff2d5e0c2043c1110a4df"),
+    '9': ObjectId("649ff2d5e0c2043c1110a4e0")
+  }
+}
+
+vi)Mentors
+zen_class> db.mentors.insertMany([
+... {
+...     mentor_id: 1,
+...     mentor_name: "prabakaran",
+...     mentor_email: "prabakaran@gmail.com",
+...   },
+...   {
+...     mentor_id: 2,
+...     mentor_name: "mariappan",
+...     mentor_email: "mariappan@gmail.com",
+...   },
+...   {
+...     mentor_id: 3,
+...     mentor_name: "siva",
+...     mentor_email: "siva@gmail.com",
+...   },
+...   {
+...     mentor_id: 4,
+...     mentor_name: "manikandan",
+...     mentor_email: "maikandan@gmail.com",
+...   },
+...   {
+...     mentor_id: 5,
+...     mentor_name: "farook",
+...     mentor_email: "farook@gmail.com",
+...   },
+...   {
+...     mentor_id: 6,
+...     mentor_name: "pugal",
+...     mentor_email: "pugal@gmail.com",
+...   },
+...   {
+...     mentor_id: 7,
+...     mentor_name: "deepa",
+...     mentor_email: "deepa@gmail.com",
+...   },
+...   {
+...     mentor_id: 8,
+...     mentor_name: "tamil",
+...     mentor_email: "tamil@gmail.com",
+...   },
+...   {
+...     mentor_id: 9,
+...     mentor_name: "roopesh",
+...     mentor_email: "roopseh@gmail.com",
+...   },
+...   {
+...     mentor_id: 10,
+...     mentor_name: "tilak",
+...     mentor_email: "tilak@gmail.com",
+...   },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("649ff482e0c2043c1110a4e1"),
+    '1': ObjectId("649ff482e0c2043c1110a4e2"),
+    '2': ObjectId("649ff482e0c2043c1110a4e3"),
+    '3': ObjectId("649ff482e0c2043c1110a4e4"),
+    '4': ObjectId("649ff482e0c2043c1110a4e5"),
+    '5': ObjectId("649ff482e0c2043c1110a4e6"),
+    '6': ObjectId("649ff482e0c2043c1110a4e7"),
+    '7': ObjectId("649ff482e0c2043c1110a4e8"),
+    '8': ObjectId("649ff482e0c2043c1110a4e9"),
+    '9': ObjectId("649ff482e0c2043c1110a4ea")
+  }
+}
+
+vii)Company drives
+zen_class> db.company_drives.insertMany([
+... {
+...     user_id: 1,
+...     drive_date: new Date("14-oct-2020"),
+...     company: "infosys",
+...   },
+...   {
+...     user_id: 2,
+...     drive_date: new Date("15-oct-2020"),
+...     company: "TCS",
+...   },
+...   {
+...     user_id: 3,
+...     drive_date: new Date("18-oct-2020"),
+...     company: "cognizant",
+...   },
+...   {
+...     user_id: 4,
+...     drive_date: new Date("24-oct-2020"),
+...     company: "amazon",
+...   },
+...   {
+...     user_id: 5,
+...     drive_date: new Date("27-oct-2020"),
+...     company: "oracle",
+...   },
+...   {
+...     user_id: 6,
+...     drive_date: new Date("28-oct-2020"),
+...     company: "IBM",
+...   },
+...   {
+...     user_id: 7,
+...     drive_date: new Date("29-oct-2020"),
+...     company: "microsoft",
+...   },
+...   {
+...     user_id: 8,
+...     drive_date: new Date("30-oct-2020"),
+...     company: "HCL",
+...   },
+...   {
+...     user_id: 9,
+...     drive_date: new Date("31-oct-2020"),
+...     company: "salesforce",
+...   },
+...   {
+...     user_id: 10,
+...     drive_date: new Date("2-nov-2020"),
+...     company: "Facebook",
+...   },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("649ff693e0c2043c1110a4eb"),
+    '1': ObjectId("649ff693e0c2043c1110a4ec"),
+    '2': ObjectId("649ff693e0c2043c1110a4ed"),
+    '3': ObjectId("649ff693e0c2043c1110a4ee"),
+    '4': ObjectId("649ff693e0c2043c1110a4ef"),
+    '5': ObjectId("649ff693e0c2043c1110a4f0"),
+    '6': ObjectId("649ff693e0c2043c1110a4f1"),
+    '7': ObjectId("649ff693e0c2043c1110a4f2"),
+    '8': ObjectId("649ff693e0c2043c1110a4f3"),
+    '9': ObjectId("649ff693e0c2043c1110a4f4")
+  }
+}
